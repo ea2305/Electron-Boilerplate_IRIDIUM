@@ -1,3 +1,4 @@
-var a = require('./test.js');
+import 'axios';
+import a from './test.js';
 
-console.log( a );
+let b = "coooo";
