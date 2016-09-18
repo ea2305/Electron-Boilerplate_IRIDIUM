@@ -4,8 +4,11 @@
   "description": "Boilerplate of iridium",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack"
   },
   "author": "Elihu A. Cruz Albores",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  }
 }
