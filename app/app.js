@@ -1,4 +1,10 @@
-import 'axios';
+import axios from 'axios';
 import a from './test.js';
 
-let b = "coooo";
+axios.get('http://gladys-api.com/prueba/modules/models/DAO_getArea.php')
+    .then( function ( res ){
+        console.log( res );
+    })
+    .catch( function( err ){
+        console.log( err );
+    }) 
