@@ -10,7 +10,7 @@ class Hello extends Component{
 
     render(){
         return(
-            <h1>Nuevo cargador webpack </h1>
+            <h1>Nuevo cargador webpackx2 </h1>
         );
     }
 
