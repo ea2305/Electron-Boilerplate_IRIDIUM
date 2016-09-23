@@ -22,6 +22,11 @@ sudo npm install --unsafe-perm --verbose -g sails
 npm run dev
 ```
 
+## Ejecutar Electron 
+```
+npm run scene
+```
+
 ## Creación de Bundle webpack simple:
 ```
 npm run webpack

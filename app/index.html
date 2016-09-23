@@ -8,10 +8,11 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <link rel="stylesheet" type="text/css" href="css/global.css">
 </head>
 <body>
 
@@ -19,19 +20,22 @@
 
         <div class="col s12 m12 center-align">
 
-            <h2 class="red-text">Hola mundo</h2>
+            <h2 class="blue-text truncate"> Boilerplate Iridium</h2>
+            <div class="divider"></div>
+            <!-- All of the Node.js APIs are available in this renderer process. -->
+            We are using node <script>document.write(process.versions.node)</script>,<br>
+            Chromium <script>document.write(process.versions.chrome)</script>,<br>
+            and Electron <script>document.write(process.versions.electron)</script>.
+            <div class="divider"></div>
 
         </div>
+        <div id="root" class="section center-align">Error al cargar</div>
 
     </div>
-
-    <div id="root">Error al cargar</div>
+   
 
     <!-- Carga de archivo estáticos-->
-    <!--script src="./dist/app.bundle.js"></script-->
-    <!--script src="http://localhost:3000/app/dist/app.bundle.js"></script-->
     <script src="http://localhost:3000/dist/app.bundle.js"></script>
-    <!--script src="http://localhost:8080/webpack-dev-server.js"></script>
-    <script src="http://localhost:8080/built/bundle.js"></script-->
+    <script src="../renderer.js" ></script>
 </body>
 </html>
