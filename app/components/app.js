@@ -10,7 +10,7 @@ class Hello extends Component{
 
     render(){
         return(
-            <h1>Nuevo cargador webpackx2 </h1>
+            <label>Nuevo cargador webpack <span className="candle"> CandleLabs Tecnologies ©</span> </label>
         );
     }
 

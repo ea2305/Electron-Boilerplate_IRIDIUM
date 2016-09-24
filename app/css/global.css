@@ -1,3 +1,21 @@
+html body{
+	color: white;
+	background: rgba(0,0,0,1);
+}
+
 * {
-	font-family: 'Yatra One', cursive;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.content{
+	margin: 1em;
+}
+
+.candle{
+	color: #fb8c00;
+}
+
+.fullSize{
+	min-width: 100%;
+	min-height: 80vh;
 }

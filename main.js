@@ -1,8 +1,10 @@
+var request = require('request');
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
 let mainWindow
+
 
 function createWindow () {
   // Create the browser window.
