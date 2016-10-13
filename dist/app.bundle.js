@@ -80,7 +80,7 @@
 	            return _react2.default.createElement(
 	                'label',
 	                null,
-	                'Nuevo cargador webpack ',
+	                'Nuevo cargador webpack | ',
 	                _react2.default.createElement(
 	                    'span',
 	                    { className: 'candle' },

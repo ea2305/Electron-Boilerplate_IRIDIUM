@@ -4,7 +4,6 @@
   "description": "Boilerplate of iridium",
   "main": "main.js",
   "scripts": {
-    "dev": "node_modules/.bin/webpack-dev-server --inline --hot",
     "webpack": "node_modules/.bin/webpack --watch",
     "babel": "babel",
     "scene": "electron .",
@@ -44,7 +43,5 @@
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   },
-  "dependencies": {
-    "axios": "^0.15.0"
-  }
+  "dependencies": {}
 }

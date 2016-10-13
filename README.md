@@ -16,22 +16,16 @@ npm install
 sudo npm install --unsafe-perm --verbose -g sails
 ```
 
-
-## Ejecución de servidor webpack:
-```
-npm run dev
-```
-
 ## Ejecutar Electron 
 ```
 npm run scene
 ```
 
-## Creación de Bundle webpack simple:
+## Creación de Bundle webpack con detección de cambios:
 ```
 npm run webpack
 ```
-
+Escucha los cambios para una construcción continua del bundle
 
 
 * MIT
