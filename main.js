@@ -1,4 +1,4 @@
-var request = require('request');
+//var request = require('request');
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -17,7 +17,7 @@ function createWindow () {
   mainWindow.webContents.openDevTools()
 
   //Devtron Plugn developers
-  require('devtron').install();
+  //require('devtron').install();
 
   
   mainWindow.on('closed', function () {
