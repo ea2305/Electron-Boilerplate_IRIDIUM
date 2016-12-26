@@ -1,10 +1,12 @@
 {
   "name": "boilerplate-iridium",
   "version": "0.1.1",
-  "main": "main.js",
+  "main": "./app/main.js",
   "description": "Boilerplate",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "clean" : "rm -rf dist/",
+    "package-mac" : "NODE_ENV=production electron-packager-compile . app --out=dist --platform=darwin --arch=all --overwrite --ignore=\".compilerc|.gitignore\""
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,4 @@
-'use strict';
-
+'use strict'
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -15,7 +14,7 @@ app.on('ready', () => {
       height: 800
     }
   );
-  mainWindow.loadURL(`file://${__dirname}/app/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
