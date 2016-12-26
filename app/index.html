@@ -1,13 +1,23 @@
+<!--
+	Documento principal, carga de archivos etc...
+	Colaboracion para proyectos con ElectronJS
+	© CandleLabs Technologies DevTeam 12-23-2016
+	versión : 0.1.1
+	author : Elihu A. Cruz Albores
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Demo App</title>
-
-    <!--Let browser know website is optimized for mobile-->
+    <title>Nombre de aplicación</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <!-- Stylesheets -->
+    <!-- 
+    	Carga de hojas de estilos 
+    	*.less -> preferente para manejo de componentes con reacJS
+    	*.css
+    -->
     <link rel="stylesheet" type="text/less" href="./stylesheets/template.less">
 
 </head>
@@ -15,7 +25,12 @@
 
     <section id="app" class="wrapper font big"></section>
     
-    <!-- Javascripts -->
+    <!-- 
+    	Javascripts -> Soporte para es6
+    	boostrap.js -> configuraciones de renderizado en DOM para reactjs
+    					uso de electron-compiler para transcripcion de es6 a es5
+	-->
+
     <script src="bootstrap.js"></script>
 </body>
 </html>

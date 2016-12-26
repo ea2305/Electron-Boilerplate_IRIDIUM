@@ -4,7 +4,7 @@
   "main": "./app/main.js",
   "description": "Boilerplate",
   "scripts": {
-    "start": "electron .",
+    "start": "cross-env NODE_ENV=development electron .",
     "clean-dist": "rm -rf dist/",
     "clean-modules": "rm -rf node_modules",
     "pack-mac": "cross-env NODE_ENV=production electron-packager-compile . app --out=dist --platform=darwin --arch=all --overwrite --ignore=\".compilerc|.gitignore\"",
