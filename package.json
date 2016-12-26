@@ -8,8 +8,12 @@
     "clean-dist": "rm -rf dist/",
     "clean-modules": "rm -rf node_modules",
     "pack-mac": "cross-env NODE_ENV=production electron-packager-compile . app --out=dist --platform=darwin --arch=all --overwrite --ignore=\".compilerc|.gitignore\"",
-    "package": "run-s clean-dist pack-mac coder-hidde",
-    "coder-hidde" : "asar pack ./dist/app-darwin-x64/app.app/Contents/Resources/app ./dist/app-darwin-x64/app.app/Contents/Resources/app.asar"
+    "pack-win": "echo \"Hey we need to fix up this tool :)!\"",
+    "package": "run-s clean-dist packager:mac",
+    "packager:mac" : "run-s pack-mac coder-hidde-mac",
+    "packager:win" : "run-s run pack-win coder-hidde-win",
+    "coder-hidde-mac" : "asar pack ./dist/app-darwin-x64/app.app/Contents/Resources/app ./dist/app-darwin-x64/app.app/Contents/Resources/app.asar",
+    "coder-hidde-win" : "asar pack ./dist/app-darwin-x64/app.app/Contents/Resources/app ./dist/app-darwin-x64/app.app/Contents/Resources/app.asar"
   },
   "repository": {
     "type": "git",
