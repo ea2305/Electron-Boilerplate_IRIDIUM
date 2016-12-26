@@ -5,8 +5,11 @@
   "description": "Boilerplate",
   "scripts": {
     "start": "electron .",
-    "clean" : "rm -rf dist/",
-    "package-mac" : "NODE_ENV=production electron-packager-compile . app --out=dist --platform=darwin --arch=all --overwrite --ignore=\".compilerc|.gitignore\""
+    "clean-dist": "rm -rf dist/",
+    "clean-modules": "rm -rf node_modules",
+    "pack-mac": "cross-env NODE_ENV=production electron-packager-compile . app --out=dist --platform=darwin --arch=all --overwrite --ignore=\".compilerc|.gitignore\"",
+    "package": "run-s clean-dist pack-mac coder-hidde",
+    "coder-hidde" : "asar pack ./dist/app-darwin-x64/app.app/Contents/Resources/app ./dist/app-darwin-x64/app.app/Contents/Resources/app.asar"
   },
   "repository": {
     "type": "git",
@@ -21,15 +24,17 @@
     "electron"
   ],
   "devDependencies": {
+    "asar": "^0.12.3",
     "babel-preset-react": "^6.16.0",
-    "devtron": "^1.3.0",
+    "cross-env": "^3.1.3",
     "electron": "^1.4.1",
     "electron-compilers": "^5.1.1",
-    "electron-packager": "^8.0.0"
+    "electron-packager": "^8.0.0",
+    "electron-prebuilt-compile": "^1.4.12",
+    "npm-run-all": "^3.1.2"
   },
   "dependencies": {
     "electron-compile": "^5.0.0",
-    "electron-prebuilt-compile": "^1.4.12",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   }
