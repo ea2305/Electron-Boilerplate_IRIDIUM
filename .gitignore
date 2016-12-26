@@ -1,7 +1,7 @@
 # Archivos a ignorar por git
 #Archivos de configuracion de git
 node_modules
-npm-debug.log
+npm-debug.log.*
 
 #Archivos de configuracion para empaquetado
 .cache
