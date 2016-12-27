@@ -5,15 +5,20 @@
   "description": "Boilerplate",
   "scripts": {
     "start": "cross-env NODE_ENV=development electron .",
-    "clean-dist": "rm -rf dist/",
-    "clean-modules": "rm -rf node_modules",
+    "clean-dist": "node cleaner.js dist",
+    "clean-modules": "node cleaner.js node_modules",
     "pack-mac": "cross-env NODE_ENV=production electron-packager-compile . app --out=dist --platform=darwin --arch=all --overwrite --ignore=\".compilerc|.gitignore\"",
-    "pack-win": "echo \"Hey we need to fix up this tool :)!\"",
+    "pack-win": "cross-env NODE_ENV=production electron-packager-compile . app --out=dist --platform=win32 --arch=x64 --overwrite --ignore=.compilerc --ignore=.gitignore ",
     "package": "run-s clean-dist packager:mac",
     "packager:mac" : "run-s pack-mac coder-hidde-mac",
-    "packager:win" : "run-s run pack-win coder-hidde-win",
-    "coder-hidde-mac" : "asar pack ./dist/app-darwin-x64/app.app/Contents/Resources/app ./dist/app-darwin-x64/app.app/Contents/Resources/app.asar",
-    "coder-hidde-win" : "asar pack ./dist/app-darwin-x64/app.app/Contents/Resources/app ./dist/app-darwin-x64/app.app/Contents/Resources/app.asar"
+    "packager:win" : "run-s pack-win coder-hidde-win",
+    "coder-hidde-mac" : "run-s hidder:mac swipe:mac",
+    "coder-hidde-win" : "run-s hidder:win swipe:win",
+    "hidder:mac" : "asar pack ./dist/app-darwin-x64/app.app/Contents/Resources/app ./dist/app-darwin-x64/app.app/Contents/Resources/app.asar",
+    "hidder:win" : "asar pack ./dist/app-win32-x64/Resources/app ./dist/app-win32-x64/Resources/app.asar",
+    "swipe:mac" : "node cleaner.js dist/app-darwin-x64/app.app/Contents/Resources/app",
+    "swipe:win" : "node cleaner.js dist\\app-win32-x64\\Resources\\app"
+
   },
   "repository": {
     "type": "git",
